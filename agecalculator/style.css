@@ -8,8 +8,128 @@ img{
     max-width: 100%;
 }
 
-input, labe{
-    display: block;
+/* Remove the up and down arrows (spinners) from the number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 
+input, label{
+    display: block;
+}
+
+.container{
+    padding: 2em;
+    background-color: green;
+}
+
+/* form layout */
+.form-container{
+    display: flex;
+    /* background-color: green; */
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.formGroup{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 1em 0 3em;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.formgGroup--item input{
+    padding: 0.5em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    width: 90px;
+}
+
+.form-container button{
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    /* margin-left: 20px; */
+    margin-top: 50px;
+    border-radius: 100%;
+    border: none;
+    background-color: black;
+    transform: translate(-50%);
+    padding: 0.5em;
+}
+.result{
+    padding: 3em 0 .5em;
+}
+
+.result h1{
+    /* padding: 2em 0; */
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;;
+}
+
+@media (min-width: 400px)
+{
+    .container{
+        width: 450px;
+        margin: 100px auto;
+    }
+ /* form layout */
+.form-container{
+    display: flex;
+    /* background-color: green; */
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.formGroup{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 1em 0 1em;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.formgGroup--item input{
+    padding: 0.5em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    width: 90px;
+}
+
+.form-container button{
+    position: absolute;
+    bottom: -30px;
+    /* margin-left: 20px; */
+    left: auto;
+    right: 0;
+    margin-top: 50px;
+    border-radius: 100%;
+    border: none;
+    background-color: black;
+    transform: translate(0);
+    padding: 0.5em;
+}
+.result{
+    padding: 1em 0 .5em;
+}
+
+.result h1{
+    /* padding: 2em 0; */
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;;
+}   
+}
