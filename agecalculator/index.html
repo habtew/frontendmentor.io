@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Age calculator app</title>
-
+  <link rel="stylesheet" href="./style.css" />
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,20 +15,30 @@
   </style>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
+  <div class="container">
+    <form>
+        <div class="formGroup">
+          <div class="">
+            <label>DAY</label>
+            <input type="text" placeholder="DD"/>
+          </div>
+          <div class="">
+            <label>DAY</label>
+            <input type="text" placeholder="MM"/>
+          </div>
+          <div class="">
+            <label>DAY</label>
+            <input type="text" placeholder="YY"/>
+          </div>
+        </div>
+        <button><img src="./assets/images/icon-arrow.svg" class="icon"/></button>
+    </form>
+    <div class="result">
+      <h1><span >--</span>years</h1>
+      <h1><span >--</span>months</h1>
+      <h1><span >--</span>days</h1>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
