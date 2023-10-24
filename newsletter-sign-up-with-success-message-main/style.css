@@ -1,0 +1,158 @@
+/* general style */
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+}
+
+img{
+    max-width: 100%;
+}
+
+label,
+input{
+    display: block;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto
+}
+
+.hero{
+    padding: 1.5em 2em;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+.title{
+    color:hsl(234, 29%, 20%)
+}
+
+.grey{
+    color: hsl(231, 7%, 60%);
+}
+
+.form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 20px;
+    display: flex;
+}
+
+.input, .btn{
+    padding: 1.2em;
+    border-radius: 10px;
+    border: 2px solid hsl(231, 7%, 60%);
+    margin-block: 10px;
+}
+
+.error{
+    color: hsl(4, 100%, 67%);
+    margin-left: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+.btn{
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: hsl(4, 100%, 67%);
+}
+
+
+@media (min-width: 450px)
+{
+    body{
+        display: flex;
+        margin: auto;
+        height: 100vh;
+    }
+    .container{
+        align-self: center;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        max-width: 700px;
+        background-color: green;
+        padding: 2em;
+        margin: auto;
+        border-radius: 20px;
+    }
+    .img{
+        max-width:300px;
+    }
+
+    .hero{
+        margin-right: 10px;
+        padding: 10px 10px;
+    }
+} 
+
+
+/* thanks page */
+
+.thanks{
+   height: 100vh;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   padding: 10em 2em 1em;
+   color: hsl(234, 29%, 20%);
+}
+.thanks *{
+    margin-block: 20px;
+}
+
+.thanks h1{
+    margin: 0;
+}
+
+.thanks button{
+    margin-top: auto;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid hsl(231, 7%, 60%);
+    border-radius: 13px;
+    background-color: hsl(234, 29%, 20%);
+    color:hsl(0, 0%, 100%);
+}
+
+@media (min-width: 450px)
+{
+    .body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .thanks{
+        width: 440px;
+        height: fit-content;
+        background-color: yellow;
+        padding: 2.5em;
+        border-radius: 15px;
+    }
+}
