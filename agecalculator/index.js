@@ -2,15 +2,16 @@ const form = document.querySelector('form')
 const date = document.querySelector('#dd')
 const month = document.querySelector('#mm')
 const year = document.querySelector('#yy')
-
+let dates = {dd: 0, mm: 0, yy: 0}
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
 
     validateForm()
-    if (date.value && month.value && year.value)
+    if (dates.dd && dates.mm && dates.yy)
     {
-        console.log(date.value, month.value, year.value)
+        console.log(dates)
+
     }
 })
 
@@ -26,6 +27,7 @@ function validateForm(){
     }
     else{
         setSuccess(date)
+        dates.dd = date.value
     }
     // for month
     if (month.value.trim() == '')
@@ -38,6 +40,7 @@ function validateForm(){
     }
     else{
         setSuccess(month)
+        dates.mm = month.value
     }
 
     // year
@@ -52,6 +55,7 @@ function validateForm(){
     }
     else{
         setSuccess(year)
+        dates.yy = year.value
     }
 
 }
@@ -66,7 +70,7 @@ function setError(element, errorMessage){
     parent.classList.add('error')
     const paragraph = parent.querySelector('p')
     paragraph.textContent = errorMessage
-    element.value = NaN
+    // element.value = NaN
 }
 
 function setSuccess(element){
