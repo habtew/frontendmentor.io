@@ -8,6 +8,10 @@ img{
     max-width: 100%;
 }
 
+.hidden{
+    display: none;
+}
+
 /* Remove the up and down arrows (spinners) from the number input */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -23,7 +27,7 @@ input, label{
 
 .container{
     padding: 2em;
-    background-color: green;
+    background-color: lightslategray;
 }
 
 /* form layout */
@@ -40,17 +44,55 @@ input, label{
     align-items: flex-start;
     justify-content: space-between;
     /* border: 1px solid black; */
-    padding: 1em 0 3em;
+    /* padding: 0.2em 0 3em; */
     width: 100%;
     margin-bottom: 20px;
 }
 
+.formgGroup--item{
+    margin-right: 12px;
+}
+
 .formgGroup--item input{
-    padding: 0.5em;
+    /* padding: 0.5em; */
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
     width: 90px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    /* border: none */
+}
+
+.formgGroup--item p{
+    visibility: hidden;
+}
+/* error message class */
+.error input{
+    border: 1px solid red;
+}
+
+.error label{
+    color: red;
+}
+
+.error p{
+    color: red;
+    visibility: visible;
+}
+
+/* success message class */
+
+.success input{
+    border: 2px solid green;
+}
+
+.success label{
+    color: green;
+}
+
+.success p{
+    visibility: hidden;
 }
 
 .form-container button{
@@ -63,7 +105,11 @@ input, label{
     border: none;
     background-color: black;
     transform: translate(-50%);
-    padding: 0.5em;
+    /* padding: 0.5em; */
+}
+
+.formgGroup--item p{
+    margin: 10px 0px 0px;
 }
 .result{
     padding: 3em 0 .5em;
@@ -79,7 +125,7 @@ input, label{
 @media (min-width: 400px)
 {
     .container{
-        width: 450px;
+        width: 500px;
         margin: 100px auto;
     }
  /* form layout */
@@ -96,9 +142,13 @@ input, label{
     align-items: flex-start;
     justify-content: space-between;
     /* border: 1px solid black; */
-    padding: 1em 0 1em;
-    width: 80%;
+    /* padding: 1em 0 1em; */
+    width: 90%;
     margin-bottom: 20px;
+}
+
+.formgGroup--item{
+    margin-right: 0px;
 }
 
 .formgGroup--item input{
@@ -106,7 +156,7 @@ input, label{
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
-    width: 90px;
+    width: 120px;
 }
 
 .form-container button{
