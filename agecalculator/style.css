@@ -103,9 +103,17 @@ input, label{
     margin-top: 50px;
     border-radius: 100%;
     border: none;
-    background-color: black;
     transform: translate(-50%);
     /* padding: 0.5em; */
+    background-color: hsl(259, 100%, 65%);
+    cursor: pointer;
+}
+
+.form-container button img{
+    background-color:  hsl(259, 100%, 65%);
+    border-radius: 100%;
+    width: 100%;
+    padding: .2em;
 }
 
 .formgGroup--item p{
@@ -120,6 +128,11 @@ input, label{
     font-size: 4rem;
     margin: 0;
     padding: 0;;
+}
+
+.result h1 span{
+    margin-right: 8px;
+    color:  hsl(259, 100%, 65%);
 }
 
 @media (min-width: 400px)
@@ -168,7 +181,7 @@ input, label{
     margin-top: 50px;
     border-radius: 100%;
     border: none;
-    background-color: black;
+    /* background-color: black; */
     transform: translate(0);
     padding: 0.5em;
 }

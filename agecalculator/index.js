@@ -10,8 +10,22 @@ form.addEventListener('submit', (e)=>{
     validateForm()
     if (dates.dd && dates.mm && dates.yy)
     {
-        console.log(dates)
-
+        const strDate = `${dates.dd}/${dates.mm}/${dates.yy}`
+        const today = new Date()
+        const dob = new Date(strDate)
+        const ageInMilliseconds = today - dob
+        if (ageInMilliseconds)
+        {
+            console.log(ageInMilliseconds)
+            const ageInDate = new Date(ageInMilliseconds)
+            const yearr = ageInDate.getUTCFullYear() - 1970
+            const monthh = ageInDate.getUTCMonth()
+            const dayss = ageInDate.getUTCDay() - 1
+            document.querySelector('.result .year').textContent = yearr
+            document.querySelector('.result .month').textContent = monthh
+            document.querySelector('.result .days').textContent = dayss
+            console.log(yearr, monthh, dayss)
+        }
     }
 })
 
@@ -49,7 +63,7 @@ function validateForm(){
     {
         setError(year, "empty not allowed")
     }
-    else if(year.value.trim().length != 4)
+    else if(year.value.trim().length != 4 || year.value.trim() > 2023)
     {
         setError(year, "Invalid input")
     }
