@@ -41,17 +41,52 @@ input{
     color: hsl(231, 7%, 60%);
 }
 
-.form{
+.input--group{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.label{
+.input--group .top{
+    display: flex;
+    align-items: center;
     font-size: 13px;
     font-weight: 100;
-    margin-top: 20px;
-    display: flex;
+    justify-content: space-between;
+}
+
+.input--group span{
+    margin: 0;
+    visibility: hidden;
+}
+
+.error span{
+    visibility: visible;
+    color: hsl(4, 100%, 67%);
+}
+.error label{
+    color: red;
+}
+
+.error input{
+    border: 1px solid red;
+    color: red
+}
+
+.success span{
+    visibility: hidden;
+}
+
+.success input{
+    color: green;
+}
+
+.success input{
+    border: 1px solid green;
+}
+
+.success label{
+    color: yellow;
 }
 
 .input, .btn{
@@ -61,10 +96,7 @@ input{
     margin-block: 10px;
 }
 
-.error{
-    color: hsl(4, 100%, 67%);
-    margin-left: auto;
-}
+
 
 .hidden{
     display: none;
