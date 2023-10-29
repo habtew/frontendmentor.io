@@ -8,10 +8,11 @@ img{
     max-width: 100%;
 }
 
-.hidden{
-    display: none;
+body{
+    margin: 0;
+    background-color: hsl(0, 0%, 94%);
+    
 }
-
 /* Remove the up and down arrows (spinners) from the number input */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -27,7 +28,9 @@ input, label{
 
 .container{
     padding: 2em;
-    background-color: lightslategray;
+    background-color: hsl(0, 0%, 100%);
+    border-bottom-right-radius: 25%;    
+    /* background-color: hsl(0, 0%, 94%); */
 }
 
 /* form layout */
