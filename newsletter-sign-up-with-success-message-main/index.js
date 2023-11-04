@@ -1,5 +1,6 @@
 const form = document.querySelector('form')
 const email = document.querySelector('.input')
+const img = document.querySelector('.img')
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
@@ -45,5 +46,18 @@ function setSuccess(element){
     }
 
     parent.classList.add('success')
+    form.submit()
     form.reset()
 }
+
+
+window.addEventListener('resize', ()=>{
+    if (window.innerWidth > 500)
+    {
+        img.src = './assets/images/illustration-sign-up-desktop.svg'
+        // console.log(window.innerWidth)
+    }
+    else{
+        img.src = './assets/images/illustration-sign-up-mobile.svg'
+    }
+})
