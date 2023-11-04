@@ -27,6 +27,8 @@ input, label{
 }
 
 .container{
+    margin: auto;
+    width: 80%;
     padding: 2em;
     background-color: hsl(0, 0%, 100%);
     border-bottom-right-radius: 25%;    
@@ -138,10 +140,10 @@ input, label{
     color:  hsl(259, 100%, 65%);
 }
 
-@media (min-width: 400px)
+@media (min-width: 700px)
 {
     .container{
-        width: 500px;
+        width: 550px;
         margin: 100px auto;
     }
  /* form layout */

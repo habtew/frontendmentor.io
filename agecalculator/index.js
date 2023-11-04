@@ -8,27 +8,54 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault()
 
     validateForm()
+
     if (dates.dd && dates.mm && dates.yy)
     {
-        const strDate = `${dates.dd}/${dates.mm}/${dates.yy}`
+        const strDate = `${dates.mm}/${dates.dd}/${dates.yy}`
         const today = new Date()
         const dob = new Date(strDate)
         const ageInMilliseconds = today - dob
+        console.log(calculateAge(new Date() - new Date(strDate)))
         if (ageInMilliseconds)
         {
-            console.log(ageInMilliseconds)
-            const ageInDate = new Date(ageInMilliseconds)
-            const yearr = ageInDate.getUTCFullYear() - 1970
-            const monthh = ageInDate.getUTCMonth()
-            const dayss = ageInDate.getUTCDay() - 1
-            document.querySelector('.result .year').textContent = yearr
-            document.querySelector('.result .month').textContent = monthh
-            document.querySelector('.result .days').textContent = dayss
-            console.log(yearr, monthh, dayss)
+            const result = calculateAge(ageInMilliseconds)
+            // console.log(result)
+            // console.log(ageInMilliseconds)
+            document.querySelector('.result .year').textContent = result.year
+            document.querySelector('.result .month').textContent = result.month
+            document.querySelector('.result .days').textContent = result.day
+            form.reset()
+            // console.log(yearr, monthh, dayss)
         }
     }
 })
 
+function calculateAge(milliseconds) {
+    const currentDate = new Date();
+    const birthDate = new Date(milliseconds);
+    
+    const yearDiff = currentDate.getUTCFullYear() - birthDate.getUTCFullYear();
+    const monthDiff = currentDate.getUTCMonth() - birthDate.getUTCMonth();
+    const dayDiff = currentDate.getUTCDate() - birthDate.getUTCDate();
+  
+    let ageInYears = yearDiff;
+    let ageInMonths = monthDiff;
+    let ageInDays = dayDiff;
+  
+    if (dayDiff < 0) {
+      ageInMonths--;
+      const lastMonth = new Date(currentDate.getUTCFullYear(), currentDate.getUTCMonth() - 1, 0);
+      ageInDays += lastMonth.getUTCDate();
+    }
+  
+    if (monthDiff < 0) {
+      ageInYears--;
+      ageInMonths += 12;
+    }
+  
+    return { year: ageInYears, month: ageInMonths, day: ageInDays };
+  }
+  
 
 function validateForm(){
     if (date.value.trim() == '')
