@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* layout */
+
+.container{
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    /* padding: 2em; */
+    margin: 100px auto;
+    border-radius: 25px;
+}
+/* result container layout */
+.result-container, .summery-container{
+    background-color: hsl(252, 100%, 67%);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    width: 100%;
+}
+.result-container{
+    color: white;
+    text-align: center;
+}
+
+.result-container .result{
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%), hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+}
+.result-container .result p{
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+.result-container h1{
+    
+}
+
+.result-container p{
+    margin-top: 0;
+}
+
+/* summary container */
+
+.summery-container{
+    background: hsl(0, 0%, 100%);
+    align-items: flex-start;
+}
+
+.summery-container h1{
+    margin: 0;
+}
+.summery-container .box{
+    width: 100%
+}
+.summery-container .summary-box{
+    display: flex;
+    padding: .2em 0;
+    /* background-color: hsl(224, 30%, 27%); */
+    /* width: 100%; */
+    margin-block: 5px;
+}
+
+.summery-container .summary-box img{
+    margin-right: 10px;
+}
+
+.summery-container .summary-box .p--result{
+    margin-left: auto;
+    margin-right: 10px;
+
+}
+
+.summery-container button{
+    padding: 1.2em;
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.summery-container button:active,
+.summery-container button:hover{
+    background-color: hsl(241, 81%, 54%);
+}
+
+@media (min-width: 450px){
+    .container{
+        max-width: 700px;
+        flex-direction: row;
+    }
+
+    .result-container .summery-container{
+        width: 50%;
+    }
+}
